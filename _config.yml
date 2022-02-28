@@ -1,37 +1,16 @@
-# Welcome to Jekyll!
+# Global website configuration values
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# This file is *NOT* reloaded automatically with `bundle exec jekyll serve`
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
-search: true
+title: &name "Tyler O'Connell"
+url: "https://tyleroconnell.com"
 
-# Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+minimal_mistakes_skin: default
+search: false
+timezone: America/New_York
 
 include:
   - _pages
@@ -58,58 +37,56 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : *name
+  avatar : &avatar "/assets/images/me.jpg"
+  location: &location "Richmond, VA"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: &email "Contact Me"
+      icon: &email_icon "fa fa-fw fa-envelope"
+      url: &email_url "mailto:hi@tyleroconnell.com"
+    - label: &pgp "(with encryption)"
+      icon: &pgp_icon "fa fa-fw fa-lock"
+      url: &pgp_url "https://keys.openpgp.org/vks/v1/by-fingerprint/77228CF81846EBB4551E31F3CAF9AB20EC908564"
+    - label: &github "My Public Code"
+      icon: &github_icon "fab fa-fw fa-github"
+      url: &github_url "https://github.com/tyleroconnell"
+    - label: &linkedin "Professional Experience"
+      icon: &linkedin_icon "fab fa-fw fa-linkedin"
+      url: &linkedin_url "https://www.linkedin.com/in/tyleroconnell"
+    - label: &facebook "Obligatory Social Presence"
+      icon: &facebook_icon "fab fa-fw fa-facebook"
+      url: &facebook_url "https://facebook.com/tylerthomasoconnell"
+    - label: &instagram "(Mostly) Travel Photos"
+      icon: &instagram_icon "fab fa-fw fa-instagram"
+      url: &instagram_url "https://instagram.com/tylertoc"
+    - label: &venmo "I don't want crypto"
+      icon: &venmo_icon "fa fa-fw fa-dollar-sign"
+      url: &venmo_url "https://venmo.com/u/tylertoc"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: ""
+      icon: *email_icon
+      url: *email_url
+    - label: ""
+      icon: *pgp_icon
+      url: *pgp_url
+    - label: ""
+      icon: *github_icon
+      url: *github_url
+    - label: ""
+      icon: *linkedin_icon
+      url: *linkedin_url
+    - label: ""
+      icon: *facebook_icon
+      url: *facebook_url
+    - label: ""
+      icon: *instagram_icon
+      url: *instagram_url
+    - label: ""
+      icon: *venmo_icon
+      url: *venmo_url
 
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+atom_feed:
+  hide: true
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
