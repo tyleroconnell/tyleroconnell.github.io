@@ -1,0 +1,92 @@
+# Global website configuration values
+#
+# This file is *NOT* reloaded automatically with `bundle exec jekyll serve`
+
+title: &name "Tyler O'Connell"
+url: "https://tyleroconnell.com"
+
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+
+minimal_mistakes_skin: default
+search: false
+timezone: America/New_York
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : *name
+  avatar : &avatar "/assets/images/me.jpg"
+  location: &location "Richmond, VA"
+  links:
+    - label: &email "Contact Me"
+      icon: &email_icon "fa fa-fw fa-envelope"
+      url: &email_url "mailto:hi@tyleroconnell.com"
+    - label: &pgp "(with encryption)"
+      icon: &pgp_icon "fa fa-fw fa-lock"
+      url: &pgp_url "https://keys.openpgp.org/vks/v1/by-fingerprint/77228CF81846EBB4551E31F3CAF9AB20EC908564"
+    - label: &github "My Public Code"
+      icon: &github_icon "fab fa-fw fa-github"
+      url: &github_url "https://github.com/tyleroconnell"
+    - label: &linkedin "Professional Experience"
+      icon: &linkedin_icon "fab fa-fw fa-linkedin"
+      url: &linkedin_url "https://www.linkedin.com/in/tyleroconnell"
+    - label: &facebook "Obligatory Social Presence"
+      icon: &facebook_icon "fab fa-fw fa-facebook"
+      url: &facebook_url "https://facebook.com/tylerthomasoconnell"
+    - label: &instagram "(Mostly) Travel Photos"
+      icon: &instagram_icon "fab fa-fw fa-instagram"
+      url: &instagram_url "https://instagram.com/tylertoc"
+    - label: &venmo "I don't want crypto"
+      icon: &venmo_icon "fa fa-fw fa-dollar-sign"
+      url: &venmo_url "https://venmo.com/u/tylertoc"
+
+footer:
+  links:
+    - label: ""
+      icon: *email_icon
+      url: *email_url
+    - label: ""
+      icon: *pgp_icon
+      url: *pgp_url
+    - label: ""
+      icon: *github_icon
+      url: *github_url
+    - label: ""
+      icon: *linkedin_icon
+      url: *linkedin_url
+    - label: ""
+      icon: *facebook_icon
+      url: *facebook_url
+    - label: ""
+      icon: *instagram_icon
+      url: *instagram_url
+    - label: ""
+      icon: *venmo_icon
+      url: *venmo_url
+
+atom_feed:
+  hide: true
+
