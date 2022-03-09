@@ -37,7 +37,6 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : *name
   avatar : &avatar "/assets/images/me.jpg"
   location: &location "Richmond, VA"
   links:
@@ -56,10 +55,7 @@ author:
     - label: &facebook "Obligatory Social Presence"
       icon: &facebook_icon "fab fa-fw fa-facebook"
       url: &facebook_url "https://facebook.com/tylerthomasoconnell"
-    - label: &instagram "(Mostly) Travel Photos"
-      icon: &instagram_icon "fab fa-fw fa-instagram"
-      url: &instagram_url "https://instagram.com/tylertoc"
-    - label: &venmo "I don't want crypto"
+    - label: &venmo "Please don't send crypto"
       icon: &venmo_icon "fa fa-fw fa-dollar-sign"
       url: &venmo_url "https://venmo.com/u/tylertoc"
 
@@ -80,9 +76,6 @@ footer:
     - label: ""
       icon: *facebook_icon
       url: *facebook_url
-    - label: ""
-      icon: *instagram_icon
-      url: *instagram_url
     - label: ""
       icon: *venmo_icon
       url: *venmo_url
