@@ -49,9 +49,6 @@ author:
     - label: &github "My Public Code"
       icon: &github_icon "fab fa-fw fa-github"
       url: &github_url "https://github.com/tyleroconnell"
-    - label: &linkedin "Professional Experience"
-      icon: &linkedin_icon "fab fa-fw fa-linkedin"
-      url: &linkedin_url "https://www.linkedin.com/in/tyleroconnell"
     - label: &facebook "Obligatory Social Presence"
       icon: &facebook_icon "fab fa-fw fa-facebook"
       url: &facebook_url "https://facebook.com/tylerthomasoconnell"
@@ -70,9 +67,6 @@ footer:
     - label: ""
       icon: *github_icon
       url: *github_url
-    - label: ""
-      icon: *linkedin_icon
-      url: *linkedin_url
     - label: ""
       icon: *facebook_icon
       url: *facebook_url
